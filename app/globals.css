@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.rounded-green-bg {
+    background-color: green;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+
+
