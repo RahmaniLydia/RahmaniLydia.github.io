@@ -7,7 +7,6 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin } from 'react-icons/fa'
 import { Image, Tooltip, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Modal, ModalOverlay, ModalContent, ModalHeader, ModalBody, ModalCloseButton ,Badge, Box } from '@chakra-ui/react';
 import { SiPython, SiRstudio, SiSass, SiCss3, SiPhp, SiHtml5 } from 'react-icons/si';
 import { RiCheckboxCircleFill } from 'react-icons/ri';
-// Ajoutez ces imports au début de votre fichier
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faUtensils, faPlane, faBook, faDance } from '@fortawesome/free-solid-svg-icons';
 
@@ -36,7 +35,7 @@ const LanguageLevel = ({ level }) => {
 };
 export default function CV() {
   return (
-    <main className="container mx-auto p-8 bg-gray-100 flex">
+    <main >
       {/* Côté gauche : Image et informations */}
       <div id='c' className="flex items-center " id="image_plus_info">
         <Image
