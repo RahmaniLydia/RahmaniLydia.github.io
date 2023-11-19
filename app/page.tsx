@@ -8,7 +8,7 @@ import { Image, Tooltip, Accordion, AccordionItem, AccordionButton, AccordionPan
 import { SiPython, SiRstudio, SiSass, SiCss3, SiPhp, SiHtml5 } from 'react-icons/si';
 import { RiCheckboxCircleFill } from 'react-icons/ri';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDumbbell, faUtensils, faPlane, faBook, faDance } from '@fortawesome/free-solid-svg-icons';
+import { faDumbbell, faUtensils, faPlane, faBook, faMusic } from '@fortawesome/free-solid-svg-icons';
 
 const LanguageLevel = ({ level }) => {
   const colors = {
@@ -35,9 +35,9 @@ const LanguageLevel = ({ level }) => {
 };
 export default function CV() {
   return (
-    <main >
+    <main className="cv-container">
       {/* Côté gauche : Image et informations */}
-      <div id='c' className="flex items-center " id="image_plus_info">
+      <div id="image_plus_info">
         <Image
           objectFit="cover"
           borderRadius="full"
@@ -56,7 +56,7 @@ export default function CV() {
       </div>
 
       {/* Côté droit : Accordéon pour les sections */}
-      <Accordion defaultIndex={[0]} allowToggle width="100%">
+      <Accordion >
         {/* Section Contact */}
         <AccordionItem>
           <h2>
@@ -65,8 +65,9 @@ export default function CV() {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel>
-            <div>
+         
+          <AccordionPanel bg="grey"> 
+            <div id='contact-info '>
               <div className="flex items-center">
                 <FaPhone className="mr-2" />
                 <span>07 62 49 86 65</span>
@@ -96,14 +97,14 @@ export default function CV() {
         </AccordionItem>
 
         {/* Section Expérience */}
-        <AccordionItem>
+        <AccordionItem  >
           <h2>
-            <AccordionButton>
-              <span>Expérience</span>
+            <AccordionButton >
+              <span >Expérience</span>
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel>
+          <AccordionPanel bg="grey">
             <div>
             <h2>Expérience Professionnelle</h2>
               <ul className="list-disc ml-6">
@@ -139,7 +140,7 @@ export default function CV() {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel>
+          <AccordionPanel bg="grey">
             <div>
             <h2>Éducation</h2>
               <ul className="list-disc ml-6">
@@ -172,7 +173,7 @@ export default function CV() {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel>
+          <AccordionPanel  bg="grey">
             <div>
               <h2>Projets Académiques</h2>
               <ul className="list-disc ml-6">
@@ -220,7 +221,7 @@ export default function CV() {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel>
+          <AccordionPanel  bg="grey">
             <div>
               <ul className="list-disc ml-6">
                 <li>Pack office : Word, Excel, PowerPoint</li>
@@ -258,7 +259,7 @@ export default function CV() {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel>
+          <AccordionPanel  bg="grey">
             <div>
               <ul className="list-disc ml-6">
                 <li>
@@ -285,7 +286,7 @@ export default function CV() {
               <AccordionIcon />
             </AccordionButton>
           </h2>
-          <AccordionPanel>
+          <AccordionPanel  bg="grey">
             <div>
               <ul className="list-disc ml-6">
                 <li>
@@ -317,28 +318,18 @@ export default function CV() {
       <AccordionIcon />
     </AccordionButton>
   </h2>
-  <AccordionPanel>
-    <div>
-    <ul className="list-disc ml-6">
-        <li>
-          <FontAwesomeIcon icon={faDance} className="mr-2" size="-50x" /> Danse (cours de hip-hop une fois par semaine)
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faDumbbell} className="mr-2" size="1x" /> Sport (course à pied, renforcement musculaire)
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faUtensils} className="mr-2" size="1x" /> Cuisine
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faPlane} className="mr-2" size="1x" /> Voyage
-        </li>
-        <li>
-          <FontAwesomeIcon icon={faBook} className="mr-2" size="1x" /> Lecture
-        </li>
-      </ul>
+  <AccordionPanel  bg="grey">
+    <div id='dv'>
+      <div className="interest-item">Danse <FontAwesomeIcon icon={faMusic} /></div>
+      <div className="interest-item">Sport <FontAwesomeIcon icon={faDumbbell} /></div>
+      <div className="interest-item">Cuisine <FontAwesomeIcon icon={faUtensils} /></div>
+      <div className="interest-item">Voyage <FontAwesomeIcon icon={faPlane} /></div>
+      <div className="interest-item">Lecture <FontAwesomeIcon icon={faBook} /></div>
     </div>
   </AccordionPanel>
 </AccordionItem>
+
+
       </Accordion>
     </main>
   );

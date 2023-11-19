@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.cv-container {
+  background-color: grey; 
+  padding: 20px; 
+}
 .rounded-green-bg {
     background-color: green;
     border-radius: 50%;
@@ -10,4 +13,25 @@
   }
 
 
+  #image_plus_info {
+    display: flex;
+    align-items: center;
+  }
 
+ 
+  #contact-info {
+    display: flex;
+    align-items: center;
+  
+    flex-direction: column;
+  }
+
+
+
+#dv {
+  display: flex;
+}
+
+.interest-item {
+  margin-right: 300px; /* Ajustez la marge selon vos préférences */
+}
