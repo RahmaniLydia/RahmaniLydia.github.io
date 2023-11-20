@@ -2,7 +2,7 @@
   "name": "cv_react",
   "version": "0.1.0",
   "private": true,
-  "homepage": https://rahmanilydia.github.io,
+  "homepage": "https://rahmanilydia.github.io",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
