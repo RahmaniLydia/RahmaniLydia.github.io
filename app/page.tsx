@@ -37,7 +37,7 @@ export default function CV() {
   return (
     <main className="cv-container">
       {/* Côté gauche : Image et informations */}
-      <div id="image_plus_info">
+      <div id="image_plus_info" className="flex items-center border p-4 rounded-lg shadow from-blue-300 to-blue-500">
         <Image
           objectFit="cover"
           borderRadius="full"
@@ -336,3 +336,5 @@ export default function CV() {
     </main>
   );
 }
+
+
