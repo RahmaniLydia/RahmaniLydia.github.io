@@ -4,6 +4,7 @@
 
 #image_plus_info {
   background-color: beige;
+  
  
 }
 .rounded-green-bg {
@@ -33,7 +34,7 @@
 }
 
 .interest-item {
-  margin-right: 300px; /* Ajustez la marge selon vos préférences */
+  margin-right: 290px; /* Ajustez la marge selon vos préférences */
 }
 
 h1 {

@@ -10,6 +10,9 @@ import { RiCheckboxCircleFill } from 'react-icons/ri';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDumbbell, faUtensils, faPlane, faBook, faMusic } from '@fortawesome/free-solid-svg-icons';
 
+
+
+
 const LanguageLevel = ({ level }) => {
   const colors = {
     beginner: 'gray.300',
@@ -33,20 +36,21 @@ const LanguageLevel = ({ level }) => {
     </Box>
   );
 };
-export default function CV() {
+
+const CV = () => {
   return (
-    <main className="cv-container">
-      {/* Côté gauche : Image et informations */}
-      <div id="image_plus_info" className="flex items-center border p-4 rounded-lg shadow from-blue-300 to-blue-500">
+    <main className="cv-container bg-gray-100 p-6">
+      {/* Section Image et Informations */}
+      <div id="image_plus_info" className="flex items-center border p-4 rounded-lg shadow bg-gradient-to-r from-blue-200 to-blue-900">
         <Image
           objectFit="cover"
           borderRadius="full"
           boxSize="200px"
           src="1675256249928.jpg"
-          alt="Rahmani Lydia"
+          alt="Votre Nom"
         />
         <div className="ml-4">
-          <p className="text-lg font-semibold">
+          <p className="text-lg font-semibold text-white">
             Je suis Lydia, une étudiante en Master 2 MIASHS spécialisée en web analyse. Mes compétences analytiques et ma
             capacité à résoudre des problèmes complexes sont renforcées par ma formation en mathématiques. Je suis
             autonome, organisée et capable de travailler en équipe. J'ai également une expérience en collaboration sur
@@ -55,27 +59,24 @@ export default function CV() {
         </div>
       </div>
 
-      {/* Côté droit : Accordéon pour les sections */}
-      <Accordion >
+      {/* Accordéon pour les sections */}
+      <Accordion allowToggle>
         {/* Section Contact */}
         <AccordionItem>
-        <h1>
-
-
+          <h1>
             <AccordionButton>
               <span>Contact</span>
               <AccordionIcon />
             </AccordionButton>
           </h1>
-         
-          <AccordionPanel bg="grey"> 
-            <div id='contact-info '>
+          <AccordionPanel bg="gray.100" p="4">
+            <div id='contact-info'>
               <div className="flex items-center">
                 <FaPhone style={{ color: '#004080' }} />
                 <span>07 62 49 86 65</span>
               </div>
               <div className="flex items-center">
-                <FaEnvelope style={{ color: '#004080' }}  />
+                <FaEnvelope style={{ color: '#004080' }} />
                 <span>lydiarah99@gmail.com</span>
               </div>
               <div className="flex items-center">
@@ -98,122 +99,169 @@ export default function CV() {
           </AccordionPanel>
         </AccordionItem>
 
-        {/* Section Expérience */}
-        <AccordionItem  >
-          <h1>
-            <AccordionButton >
-              <span >Expérience  Professionelle</span>
-              <AccordionIcon />
-            </AccordionButton>
-            </h1>
-          <AccordionPanel bg="grey">
-            <div>
-           
-              <ul className="list-disc ml-6">
-                  <li>
-                    <h3>Institut ONCOLille (Stage)</h3>
-                    <p>Stagiaire Data Analyste | 2022 - Présent</p>
-                    <p>2 Mois</p>
-                    <ul className="list-disc ml-6">
-                      <li>Déterminer les facteurs individuels et socioéconomiques qui influencent la récidive des cancers œsophagiens</li>
-                      <li>Réalisation d’une étude statistique</li>
-                      <li>Modélisation prédictive en utilisant les méthodes de classification supervisée (Bagging, Neural network, RandomForest, Logistic Regression)</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <h3>Employée Polyvalente</h3>
-                    <p>Traitement des commandes, Serveuse en salle, Caissière, Gestion d'équipe</p>
-                  </li>
-                  <li>
-                    <h3>Tutorat en Mathématiques</h3>
-                    <p>Chez Petit Prince Burger, Lille (juin 2020 - à ce jour)</p>
-                    <p>Assistance dans la compréhension du cours et des travaux dirigés de mathématiques auprès des lycéens de 2ème année et 3ème année</p>
-                  </li>
-                </ul>
-            </div>
-          </AccordionPanel>
-        </AccordionItem>
+       {/* Section Expérience Professionnelle */}
+<AccordionItem>
+  <h1>
+    <AccordionButton>
+      <span>Expérience Professionnelle</span>
+      <AccordionIcon />
+    </AccordionButton>
+  </h1>
+  <AccordionPanel bg="blue.100" p="4">
+    <div className="mb-4">
+      {[
+        {
+          company: "Institut ONCOLille (Stage)",
+          position: "Stagiaire Data Analyste",
+          date: "2022 - Présent",
+          duration: "2 Mois",
+          responsibilities: [
+            "Déterminer les facteurs individuels et socioéconomiques qui influencent la récidive des cancers œsophagiens",
+            "Réalisation d’une étude statistique",
+            "Modélisation prédictive en utilisant les méthodes de classification supervisée (Bagging, Neural network, RandomForest, Logistic Regression)",
+          ],
+        },
+        {
+          company: "Employée Polyvalente",
+          position: "Traitement des commandes, Serveuse en salle, Caissière, Gestion d'équipe",
+        },
+        {
+          company: "Tutorat en Mathématiques",
+          position: "Chez Petit Prince Burger, Lille",
+          date: "juin 2020 - à ce jour",
+          responsibilities: [
+            "Assistance dans la compréhension du cours et des travaux dirigés de mathématiques auprès des lycéens de 2ème année et 3ème année",
+          ],
+        },
+      ].map((experience, index) => (
+        <Box key={index} bg="white" p="4" rounded="md" shadow="md" mb="4">
+          <h3 className="text-lg font-semibold mb-2">{experience.company}</h3>
+          {(experience.date || experience.position) && (
+            <p>
+              {experience.position} | {experience.date} | {experience.duration}
+            </p>
+          )}
+          {experience.responsibilities && (
+            <ul className="list-disc ml-6">
+              {experience.responsibilities.map((resp, idx) => (
+                <li key={idx}>{resp}</li>
+              ))}
+            </ul>
+          )}
+        </Box>
+      ))}
+    </div>
+  </AccordionPanel>
+</AccordionItem>
 
-        {/* Section Éducation */}
-        <AccordionItem>
-          <h1>
-            <AccordionButton>
-              <span>Éducation</span>
-              <AccordionIcon />
-            </AccordionButton>
-            </h1>
-          <AccordionPanel bg="grey">
-            <div>
-           
-              <ul className="list-disc ml-6">
-                  <li>
-                    <h3>Master 2 MIASHS parcours Web Analyste</h3>
-                    <p>Université de Lille, 2023 - 2024</p>
-                  </li>
-                  <li>
-                    <h3>Master 1 MIASHS parcours Web Analyste</h3>
-                    <p>Université de Lille, 2022 - 2023</p>
-                  </li>
-                  <li>
-                    <h3>Licence 2 informatique</h3>
-                    <p>USTHB, 2018 - 2019</p>
-                  </li>
-                  <li>
-                    <h3>Licence 1 mathématiques et informatique</h3>
-                    <p>Université de Lille, 2017 - 2018</p>
-                  </li>
-                </ul>
-            </div>
-          </AccordionPanel>
-        </AccordionItem>
 
-        {/* Section Projets */}
-        <AccordionItem>
-          <h1>
-            <AccordionButton>
-              <span>Projets Académiques</span>
-              <AccordionIcon />
-            </AccordionButton>
-            </h1>
-          <AccordionPanel  bg="grey">
-            <div>
-              
-              <ul className="list-disc ml-6">
-                  <li>
-                    <h3>Projet universitaire : Prévision</h3>
-                    <p>Jan. 2023 - Avril. 2023</p>
-                    <p>Application des méthodes statistiques (HOLT, BOX, JENKINS)</p>
-                    <p>Visualisation et Reporting</p>
-                  </li>
-                  <li>
-                    <h3>Projet universitaire : Programmation Web</h3>
-                    <p>Fév. 2023 - Avril. 2023</p>
-                    <p>Création d'un chat en ligne permettant aux utilisateurs de communiquer en temps réel</p>
-                    <p>Outils utilisés : PHP, JavaScript, HTML, CSS</p>
-                  </li>
-                  <li>
-                    <h3>Projet universitaire : ANALYSE DES DONNÉES</h3>
-                    <p>Déc. 2022 - Janv. 2023</p>
-                    <p>Extraction des données, Visualisation et Reporting</p>
-                    <p>Outil utilisé : Python</p>
-                  </li>
-                  <li>
-                    <h3>Projet universitaire : SEO</h3>
-                    <p>Déc. 2022 - Janv. 2023</p>
-                    <p>Réalisation de l'Audit Technique d'un site internet</p>
-                    <p>Maniement des outils SEO</p>
-                  </li>
-                  <li>
-                    <h3>Projet universitaire : Étude statistique</h3>
-                    <p>Sept. 2022 - Déc. 2022</p>
-                    <p>Extraction des données, Visualisation et Reporting</p>
-                    <p>Réaliser une ACP et une régression linéaire</p>
-                    <p>Outil utilisé : RSTUDIO</p>
-                  </li>
-                </ul>
-            </div>
-          </AccordionPanel>
-        </AccordionItem>
+       {/* Section Éducation */}
+<AccordionItem>
+  <h1>
+    <AccordionButton>
+      <span>Éducation</span>
+      <AccordionIcon />
+    </AccordionButton>
+  </h1>
+  <AccordionPanel bg="blue.100" p="4">
+    <div className="mb-4">
+      {[
+        {
+          degree: "Master 2 MIASHS parcours Web Analyste",
+          university: "Université de Lille",
+          date: "2023 - 2024",
+        },
+        {
+          degree: "Master 1 MIASHS parcours Web Analyste",
+          university: "Université de Lille",
+          date: "2022 - 2023",
+        },
+        {
+          degree: "Licence 2 informatique",
+          university: "USTHB",
+          date: "2018 - 2019",
+        },
+        {
+          degree: "Licence 1 mathématiques et informatique",
+          university: "Université de Lille",
+          date: "2017 - 2018",
+        },
+      ].map((education, index) => (
+        <Box key={index} bg="white" p="4" rounded="md" shadow="md" mb="4">
+          <h3 className="text-lg font-semibold mb-2">{education.degree}</h3>
+          <p>{education.university}, {education.date}</p>
+        </Box>
+      ))}
+    </div>
+  </AccordionPanel>
+</AccordionItem>
+
+
+      {/* Section Projets Académiques */}
+<AccordionItem>
+  <h1>
+    <AccordionButton>
+      <span>Projets Académiques</span>
+      <AccordionIcon />
+    </AccordionButton>
+  </h1>
+  <AccordionPanel bg="blue.100" p="4">
+    <div className="mb-4">
+      {[
+        {
+          title: "Projet universitaire : Prévision",
+          date: "Jan. 2023 - Avril. 2023",
+          description: [
+            "Application des méthodes statistiques (HOLT, BOX, JENKINS)",
+            "Visualisation et Reporting",
+          ],
+        },
+        {
+          title: "Projet universitaire : Programmation Web",
+          date: "Fév. 2023 - Avril. 2023",
+          description: [
+            "Création d'un chat en ligne permettant aux utilisateurs de communiquer en temps réel",
+            "Outils utilisés : PHP, JavaScript, HTML, CSS",
+          ],
+        },
+        {
+          title: "Projet universitaire : ANALYSE DES DONNÉES",
+          date: "Déc. 2022 - Janv. 2023",
+          description: [
+            "Extraction des données, Visualisation et Reporting",
+            "Outil utilisé : Python",
+          ],
+        },
+        {
+          title: "Projet universitaire : SEO",
+          date: "Déc. 2022 - Janv. 2023",
+          description: [
+            "Réalisation de l'Audit Technique d'un site internet",
+            "Maniement des outils SEO",
+          ],
+        },
+        {
+          title: "Projet universitaire : Étude statistique",
+          date: "Sept. 2022 - Déc. 2022",
+          description: [
+            "Extraction des données, Visualisation et Reporting",
+            "Réaliser une ACP et une régression linéaire",
+            "Outil utilisé : RSTUDIO",
+          ],
+        },
+      ].map((project, index) => (
+        <Box key={index} bg="white" p="4" rounded="md" shadow="md" mb="4">
+          <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
+          <p>{project.date}</p>
+          {project.description.map((desc, idx) => (
+            <p key={idx}>{desc}</p>
+          ))}
+        </Box>
+      ))}
+    </div>
+  </AccordionPanel>
+</AccordionItem>
+
 
         {/* Section Compétences */}
         <AccordionItem>
@@ -223,8 +271,8 @@ export default function CV() {
               <AccordionIcon />
             </AccordionButton>
           </h1>
-          <AccordionPanel  bg="grey">
-            <div>
+          <AccordionPanel bg="gray.100" p="4">
+            <div className="mb-4">
               <ul className="list-disc ml-6">
                 <li>Pack office : Word, Excel, PowerPoint</li>
                 <li>Programmation :
@@ -251,18 +299,17 @@ export default function CV() {
             </div>
           </AccordionPanel>
         </AccordionItem>
-        
-       
-  {/* Section Langues */}
-  <AccordionItem>
+
+        {/* Section Langues */}
+        <AccordionItem>
           <h1>
             <AccordionButton>
               <span>Langues</span>
               <AccordionIcon />
             </AccordionButton>
           </h1>
-          <AccordionPanel  bg="grey">
-            <div>
+          <AccordionPanel bg="gray.100" p="4">
+            <div className="mb-4">
               <ul className="list-disc ml-6">
                 <li>
                   Français: <LanguageLevel level={4} />
@@ -280,16 +327,17 @@ export default function CV() {
             </div>
           </AccordionPanel>
         </AccordionItem>
-         {/* Section Atouts */}
-         <AccordionItem>
+
+        {/* Section Atouts */}
+        <AccordionItem>
           <h1>
             <AccordionButton>
               <span>Atouts</span>
               <AccordionIcon />
             </AccordionButton>
           </h1>
-          <AccordionPanel  bg="grey">
-            <div>
+          <AccordionPanel bg="gray.100" p="4">
+            <div className="mb-4">
               <ul className="list-disc ml-6">
                 <li>
                   <RiCheckboxCircleFill className="inline-block text-green-500" /> Rigueur
@@ -313,28 +361,29 @@ export default function CV() {
             </div>
           </AccordionPanel>
         </AccordionItem>
+
+        {/* Section Intérêts et Loisirs */}
         <AccordionItem>
-  <h1>
-    <AccordionButton>
-      <span>Intérêts et Loisirs</span>
-      <AccordionIcon />
-    </AccordionButton>
-  </h1>
-  <AccordionPanel  bg="grey">
-    <div id='dv'>
+          <h1>
+            <AccordionButton>
+              <span>Intérêts et Loisirs</span>
+              <AccordionIcon />
+            </AccordionButton>
+          </h1>
+          <AccordionPanel bg="gray.100" p="4">
+             <div id='dv'>
       <div className="interest-item">Danse <FontAwesomeIcon icon={faMusic}  style={{ color: '#004080' }} /></div>
       <div className="interest-item">Sport <FontAwesomeIcon icon={faDumbbell} style={{ color: '#004080' }}  /></div>
       <div className="interest-item">Cuisine <FontAwesomeIcon icon={faUtensils} style={{ color: '#004080' }}  /></div>
       <div className="interest-item">Voyage <FontAwesomeIcon icon={faPlane} style={{ color: '#004080' }}  /></div>
       <div className="interest-item">Lecture <FontAwesomeIcon icon={faBook}  style={{ color: '#004080' }} /></div>
     </div>
-  </AccordionPanel>
-</AccordionItem>
-
+          </AccordionPanel>
+        </AccordionItem>
 
       </Accordion>
     </main>
   );
-}
+};
 
-
+export default CV;
