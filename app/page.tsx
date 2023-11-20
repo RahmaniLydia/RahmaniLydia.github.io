@@ -12,15 +12,14 @@ import { faDumbbell, faUtensils, faPlane, faBook, faMusic } from '@fortawesome/f
 
 
 
-
-const LanguageLevel = ({ level }) => {
+// Utilisez directement le composant ici
+const LanguageLevelComponent: React.FC<{ level: number }> = ({ level }) => {
   const colors = {
     beginner: 'gray.300',
     intermediate: 'yellow.300',
     advanced: 'green.300',
     expert: 'teal.300',
   };
-
   return (
     <Box display="flex">
       {[...Array(4)].map((_, index) => (
@@ -312,16 +311,16 @@ const CV = () => {
             <div className="mb-4">
               <ul className="list-disc ml-6">
                 <li>
-                  Français: <LanguageLevel level={4} />
+                  Français: <LanguageLevelComponent level={4} />
                 </li>
                 <li>
-                  Arabe: <LanguageLevel level={4} />
+                  Arabe: <LanguageLevelComponent level={4} />
                 </li>
                 <li>
-                  Anglais: <LanguageLevel level={2} />
+                  Anglais: <LanguageLevelComponent level={2} />
                 </li>
                 <li>
-                  Kabyle: <LanguageLevel level={4} />
+                  Kabyle: <LanguageLevelComponent level={4} />
                 </li>
               </ul>
             </div>
