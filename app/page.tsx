@@ -53,7 +53,7 @@ const CV = () => {
           <p className="text-lg font-semibold text-white">
             Je suis Lydia, une étudiante en Master 2 MIASHS spécialisée en web analyse. Mes compétences analytiques et ma
             capacité à résoudre des problèmes complexes sont renforcées par ma formation en mathématiques. Je suis
-            autonome, organisée et capable de travailler en équipe. J'ai également une expérience en collaboration sur
+            autonome, organisée et capable de travailler en équipe. J&apos;ai également une expérience en collaboration sur
             des projets, démontrant ma flexibilité.
           </p>
         </div>
@@ -117,7 +117,7 @@ const CV = () => {
           duration: "2 Mois",
           responsibilities: [
             "Déterminer les facteurs individuels et socioéconomiques qui influencent la récidive des cancers œsophagiens",
-            "Réalisation d’une étude statistique",
+            "Réalisation d&apos;une étude statistique",
             "Modélisation prédictive en utilisant les méthodes de classification supervisée (Bagging, Neural network, RandomForest, Logistic Regression)",
           ],
         },
