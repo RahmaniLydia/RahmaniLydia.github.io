@@ -59,29 +59,31 @@ export default function CV() {
       <Accordion >
         {/* Section Contact */}
         <AccordionItem>
-          <h2>
+        <h1>
+
+
             <AccordionButton>
               <span>Contact</span>
               <AccordionIcon />
             </AccordionButton>
-          </h2>
+          </h1>
          
           <AccordionPanel bg="grey"> 
             <div id='contact-info '>
               <div className="flex items-center">
-                <FaPhone className="mr-2" />
+                <FaPhone style={{ color: '#004080' }} />
                 <span>07 62 49 86 65</span>
               </div>
               <div className="flex items-center">
-                <FaEnvelope className="mr-2" />
+                <FaEnvelope style={{ color: '#004080' }}  />
                 <span>lydiarah99@gmail.com</span>
               </div>
               <div className="flex items-center">
-                <FaMapMarkerAlt className="mr-2" />
+                <FaMapMarkerAlt style={{ color: '#004080' }} />
                 <span>183 Rue Gabriel Péri, 94400, Vitry-sur-Seine</span>
               </div>
               <div className="flex items-center">
-                <FaLinkedin className="mr-2" />
+                <FaLinkedin style={{ color: '#004080' }} />
                 <span>
                   <a
                     href="https://www.linkedin.com/in/lydia-rahmani"
@@ -98,15 +100,15 @@ export default function CV() {
 
         {/* Section Expérience */}
         <AccordionItem  >
-          <h2>
+          <h1>
             <AccordionButton >
-              <span >Expérience</span>
+              <span >Expérience  Professionelle</span>
               <AccordionIcon />
             </AccordionButton>
-          </h2>
+            </h1>
           <AccordionPanel bg="grey">
             <div>
-            <h2>Expérience Professionnelle</h2>
+           
               <ul className="list-disc ml-6">
                   <li>
                     <h3>Institut ONCOLille (Stage)</h3>
@@ -134,15 +136,15 @@ export default function CV() {
 
         {/* Section Éducation */}
         <AccordionItem>
-          <h2>
+          <h1>
             <AccordionButton>
               <span>Éducation</span>
               <AccordionIcon />
             </AccordionButton>
-          </h2>
+            </h1>
           <AccordionPanel bg="grey">
             <div>
-            <h2>Éducation</h2>
+           
               <ul className="list-disc ml-6">
                   <li>
                     <h3>Master 2 MIASHS parcours Web Analyste</h3>
@@ -167,15 +169,15 @@ export default function CV() {
 
         {/* Section Projets */}
         <AccordionItem>
-          <h2>
+          <h1>
             <AccordionButton>
-              <span>Projets</span>
+              <span>Projets Académiques</span>
               <AccordionIcon />
             </AccordionButton>
-          </h2>
+            </h1>
           <AccordionPanel  bg="grey">
             <div>
-              <h2>Projets Académiques</h2>
+              
               <ul className="list-disc ml-6">
                   <li>
                     <h3>Projet universitaire : Prévision</h3>
@@ -215,12 +217,12 @@ export default function CV() {
 
         {/* Section Compétences */}
         <AccordionItem>
-          <h2>
+          <h1>
             <AccordionButton>
               <span>Compétences</span>
               <AccordionIcon />
             </AccordionButton>
-          </h2>
+          </h1>
           <AccordionPanel  bg="grey">
             <div>
               <ul className="list-disc ml-6">
@@ -253,12 +255,12 @@ export default function CV() {
        
   {/* Section Langues */}
   <AccordionItem>
-          <h2>
+          <h1>
             <AccordionButton>
               <span>Langues</span>
               <AccordionIcon />
             </AccordionButton>
-          </h2>
+          </h1>
           <AccordionPanel  bg="grey">
             <div>
               <ul className="list-disc ml-6">
@@ -280,12 +282,12 @@ export default function CV() {
         </AccordionItem>
          {/* Section Atouts */}
          <AccordionItem>
-          <h2>
+          <h1>
             <AccordionButton>
               <span>Atouts</span>
               <AccordionIcon />
             </AccordionButton>
-          </h2>
+          </h1>
           <AccordionPanel  bg="grey">
             <div>
               <ul className="list-disc ml-6">
@@ -312,19 +314,19 @@ export default function CV() {
           </AccordionPanel>
         </AccordionItem>
         <AccordionItem>
-  <h2>
+  <h1>
     <AccordionButton>
       <span>Intérêts et Loisirs</span>
       <AccordionIcon />
     </AccordionButton>
-  </h2>
+  </h1>
   <AccordionPanel  bg="grey">
     <div id='dv'>
-      <div className="interest-item">Danse <FontAwesomeIcon icon={faMusic} /></div>
-      <div className="interest-item">Sport <FontAwesomeIcon icon={faDumbbell} /></div>
-      <div className="interest-item">Cuisine <FontAwesomeIcon icon={faUtensils} /></div>
-      <div className="interest-item">Voyage <FontAwesomeIcon icon={faPlane} /></div>
-      <div className="interest-item">Lecture <FontAwesomeIcon icon={faBook} /></div>
+      <div className="interest-item">Danse <FontAwesomeIcon icon={faMusic}  style={{ color: '#004080' }} /></div>
+      <div className="interest-item">Sport <FontAwesomeIcon icon={faDumbbell} style={{ color: '#004080' }}  /></div>
+      <div className="interest-item">Cuisine <FontAwesomeIcon icon={faUtensils} style={{ color: '#004080' }}  /></div>
+      <div className="interest-item">Voyage <FontAwesomeIcon icon={faPlane} style={{ color: '#004080' }}  /></div>
+      <div className="interest-item">Lecture <FontAwesomeIcon icon={faBook}  style={{ color: '#004080' }} /></div>
     </div>
   </AccordionPanel>
 </AccordionItem>
