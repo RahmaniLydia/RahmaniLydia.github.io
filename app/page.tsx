@@ -220,7 +220,7 @@ const CV = () => {
           title: "Projet universitaire : Programmation Web",
           date: "Fév. 2023 - Avril. 2023",
           description: [
-            "Création d'un chat en ligne permettant aux utilisateurs de communiquer en temps réel",
+            "Création d&apos;un chat en ligne permettant aux utilisateurs de communiquer en temps réel",
             "Outils utilisés : PHP, JavaScript, HTML, CSS",
           ],
         },
@@ -236,7 +236,7 @@ const CV = () => {
           title: "Projet universitaire : SEO",
           date: "Déc. 2022 - Janv. 2023",
           description: [
-            "Réalisation de l'Audit Technique d'un site internet",
+            "Réalisation de l&apos;Audit Technique d'un site internet",
             "Maniement des outils SEO",
           ],
         },
